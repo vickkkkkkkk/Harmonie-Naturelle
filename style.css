@@ -1,0 +1,228 @@
+:root {
+    --bg: #ffffff;
+    --accent: #5e715e;
+    --text: #333333;
+    --border: #f0f0f0;
+}
+
+body { 
+    font-family: 'Montserrat', sans-serif; 
+    margin: 0; 
+    background: var(--bg); 
+    color: var(--text); 
+    line-height: 1.6; 
+}
+
+h1, h2, h3, h4 { 
+    font-family: 'Cormorant Garamond', serif; 
+    font-weight: 300; 
+    text-align: center; 
+}
+
+.container { 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.navbar { 
+    padding: 40px 0; 
+}
+
+.flex-nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo { 
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: 1.4rem; 
+    text-decoration: none; 
+    color: var(--text); 
+    letter-spacing: 2px; 
+    text-transform: uppercase; 
+}
+
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 30px; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: var(--text); 
+    font-size: 0.75rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+.nav-links a.active { 
+    color: var(--accent); 
+    font-weight: bold; 
+}
+
+.separated-navbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    background-color: #f7faf7; 
+}
+
+/* ==========================================================================
+   Bannière Hero
+   ========================================================================== */
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.banner-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.5rem;
+    font-weight: 700; 
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+.banner-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; 
+    font-size: 1rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   Grille des Services
+   ========================================================================== */
+.services-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px; 
+    margin: 60px 0; 
+}
+
+.service-box { 
+    border: 1px solid var(--border); 
+    padding: 40px; 
+    text-align: center; 
+    background: #ffffff; 
+}
+
+.icon-circle { 
+    width: 50px; height: 50px; border: 1px solid var(--accent); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: var(--accent); 
+}
+
+/* ==========================================================================
+   Mises en page de Contenu
+   ========================================================================== */
+.content-page { 
+    padding-top: 50px; 
+    padding-bottom: 20px; 
+}
+
+.content-page h2 { font-size: 2.4rem; margin-bottom: 30px; }
+.content-page h3 { font-size: 1.8rem; margin-top: 0; margin-bottom: 25px; text-align: left; }
+.lead { font-size: 1.1rem; font-weight: 300; text-align: center; max-width: 800px; margin: 0 auto 40px auto; line-height: 1.8; opacity: 0.9; }
+
+.pillars-grid { display: flex; flex-direction: column; gap: 15px; }
+.pillar-box { background: #fafafa; border: 1px solid var(--border); padding: 20px 25px; border-radius: 4px; }
+.pillar-box h4 { font-size: 1.1rem; margin: 0 0 5px 0; color: var(--accent); text-align: left; font-weight: 500; }
+.pillar-box p { font-size: 0.85rem; margin: 0; opacity: 0.8; }
+
+.grid-with-image { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; margin: 60px 0; }
+.grid-with-image .image-side { height: 450px; }
+.grid-with-image-reverse { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 40px; align-items: center; margin: 60px 0; }
+.grid-with-image-reverse .image-side { height: 440px; }
+.page-img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; display: block; }
+
+/* Section Visio & Alertes */
+.visio-callout { background: #f4f6f4; border: 1px solid #e3e8e3; padding: 40px; border-radius: 4px; }
+.text-side-callout { text-align: center; padding: 10px; }
+.text-side-callout h3 { text-align: center; }
+.visio-callout p { max-width: 600px; margin: 15px auto; font-size: 0.95rem; }
+.visio-badge { display: inline-block; background: var(--accent); color: white; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 6px 16px; border-radius: 20px; margin-bottom: 15px; }
+.important-notice { background: #fff; border-left: 3px solid var(--accent); padding: 15px; text-align: left; border-radius: 4px; font-size: 0.9rem; margin-top: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.01); }
+
+/* Listes de prix */
+.price-row { display: flex; justify-content: space-between; align-items: center; padding: 25px 0; border-bottom: 1px solid var(--border); }
+.price-details { display: flex; flex-direction: column; gap: 4px; text-align: left; }
+.price-title { font-size: 1.1rem; color: #111; font-weight: 400; }
+.price-subtitle { font-size: 0.85rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+.price-amount { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--accent); font-weight: 500; }
+.initial-visit-row { background: #fdfdfd; padding: 25px 15px; margin: 0 -15px; border-radius: 4px; }
+.price-description { font-size: 0.85rem; opacity: 0.75; margin: 10px 0 0 0; line-height: 1.5; max-width: 500px; }
+
+.btn-primary { display: inline-block; background: var(--accent); color: white; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; padding: 14px 28px; border-radius: 4px; transition: background 0.3s; }
+.btn-primary:hover { background: #4a594a; }
+
+/* ==========================================================================
+   Réseaux Sociaux & Réservations (Footer)
+   ========================================================================== */
+.external-booking { text-align: center; margin: 80px 0 40px 0; padding: 20px 0; }
+.section-intro { font-size: 0.95rem; opacity: 0.8; margin-bottom: 30px; font-weight: 200; }
+.social-booking-channels { display: flex; justify-content: center; gap: 40px; margin-top: 20px; }
+
+.booking-icon-link { display: inline-flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--text); transition: transform 0.3s ease, color 0.3s ease; gap: 10px; }
+.booking-icon { font-size: 1.5rem; color: var(--accent); border: 1px solid var(--border); padding: 15px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #fafafa; transition: 0.3s; }
+.booking-text { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; }
+.booking-icon-link:hover .booking-icon { background: var(--accent); color: #ffffff; border-color: var(--accent); transform: translateY(-3px); }
+.booking-icon-link:hover .booking-text { opacity: 1; color: var(--accent); }
+
+/* Mini barre d'icones pour les autres pages en bas */
+.footer-links-container { border-top: 1px solid var(--border); padding-top: 40px; margin-top: 60px; text-align: center; }
+.mini-footer-channels { gap: 15px; }
+.mini-footer-channels .booking-icon { padding: 10px; width: 20px; height: 20px; font-size: 1.1rem; }
+.mini-footer-channels .booking-icon-link { gap: 0; }
+
+footer { text-align: center; padding: 40px 0 60px 0; font-size: 0.7rem; letter-spacing: 2px; opacity: 0.4; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-with-image, .grid-with-image-reverse { grid-template-columns: 1fr; gap: 20px; }
+    .grid-with-image .image-side, .grid-with-image-reverse .image-side { height: 250px; order: -1; }
+    .content-page h3 { text-align: center; }
+    .banner-title { font-size: 2.8rem; }
+    .flex-nav { flex-direction: column; gap: 20px; }
+    .banner-container { height: 320px; }
+    .price-row { flex-direction: column; text-align: center; gap: 10px; }
+    .price-details { text-align: center; }
+    .social-booking-channels { gap: 20px; }
+}
